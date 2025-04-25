@@ -664,20 +664,9 @@ SMODS.Seal{
 	no_edeck = true,
 
     calculate = function(self, card, context)
-		if context.after then
-			for i = 1, #G.hand.cards do 
-				if 
-					G.hand.cards[i].seal == 'sillyseals_infernalseal' 
-					and G.hand.cards[i] == card
-				then
-					local _score = G.GAME.current_round.current_hand.chips * G.GAME.current_round.current_hand.mult
-					if _score > G.GAME.blind.chips then
-						--sendInfoMessage("test", "Infernal Seal")
-						for i = 1, self.config.quintuple_tags do
-							add_tag(Tag("tag_cry_quintuple"))
-						end
-					end	
-				end
+		if context.playing_card_end_of_round then
+			for i = 1, self.config.quintuple_tags do
+				add_tag(Tag("tag_cry_quintuple"))
 			end
 		end
     end,

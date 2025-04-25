@@ -271,8 +271,7 @@ return {
                 name = 'Infernal Seal',
                 text = {
                     'Gives {C:attention}#1# Quintuple Tag(s){} if',
-                    'held in hand and your score',
-                    '{C:attention}catches on fire'
+                    'held in hand at end of round'
                 }
             },
             sillyseals_solarseal_seal = {
