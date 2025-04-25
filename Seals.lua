@@ -446,6 +446,7 @@ SMODS.Seal{
     badge_colour = HEX "ff0088",
     config = { retriggers = 1 },
 	no_edeck = true,
+	weight = 0.3,
     calculate = function(self, card, context)
         if context.repetition then
             if context.cardarea == G.play then
@@ -469,6 +470,7 @@ SMODS.Seal{
     badge_colour = HEX "5065FA",
     config = { planets_amount = 8 },
 	no_edeck = true,
+	weight = 0.3,
     calculate = function(self, card, context)
         if context.playing_card_end_of_round then
 			G.E_MANAGER:add_event(Event({
@@ -519,6 +521,7 @@ SMODS.Seal{
     badge_colour = HEX "BE7EFA",
     config = { spectral_cards = 2, discarded_cards = 5 },
 	no_edeck = true,
+	weight = 0.3,
     calculate = function(self, card, context)
         if context.discard then
 			----sendInfoMessage("Discarding possible Lilac seals", "Lilac Seal")
@@ -557,6 +560,7 @@ SMODS.Seal{
 	pos = { x = 0, y = 0 },
     badge_colour = HEX "ff00ff",
 	no_edeck = true,
+	weight = 0.3,
     calculate = function(self, card, context)
         if context.main_scoring and context.cardarea == G.play then
 			level_up_hand(nil, context.scoring_name, true, (G.GAME.current_round.hands_left * 2))
@@ -572,6 +576,7 @@ SMODS.Seal{
 	pos = { x = 0, y = 0 },
     badge_colour = HEX "22ff00",
 	no_edeck = true,
+	weight = 0.3,
     calculate = function(self, card, context)
         if context.main_scoring and context.cardarea == G.play then
 			--Code for finding the next edition in the collection borrowed from Cryptid ://REWORK (Credit to MathIsFun)
@@ -601,6 +606,7 @@ SMODS.Seal{
     badge_colour = SMODS.Gradients.sillyseals_colour_neapolitan,
     config = { colours_amount = 5 },
 	no_edeck = true,
+	weight = 0.3,
     calculate = function(self, card, context)
         if context.main_scoring and context.cardarea == G.play then
 			local _hand = G.GAME.hands[G.FUNCS.get_poker_hand_info(G.play.cards)]
@@ -636,9 +642,10 @@ SMODS.Seal{
     badge_colour = SMODS.Gradients.sillyseals_colour_gemstone,
     config = { money_mult = 3 },
 	no_edeck = true,
+	weight = 0.3,
     calculate = function(self, card, context)
         if context.main_scoring and context.cardarea == G.play then
-			ease_dollars(G.GAME.hands[G.FUNCS.get_poker_hand_info(G.play.cards)].played * money_mult)
+			ease_dollars(G.GAME.hands[G.FUNCS.get_poker_hand_info(G.play.cards)].played * self.config.money_mult)
 		end
     end,
     loc_vars = function(self)
@@ -662,7 +669,7 @@ SMODS.Seal{
     badge_colour = HEX "FF5500",
     config = { quintuple_tags = 2 },
 	no_edeck = true,
-
+	weight = 0.05,
     calculate = function(self, card, context)
 		if context.playing_card_end_of_round then
 			for i = 1, self.config.quintuple_tags do
@@ -681,7 +688,7 @@ SMODS.Seal{
 	key = 'solarseal',
 	pos = { x = 0, y = 0 },
 	no_edeck = true,
-
+	weight = 0.05,
     badge_colour = SMODS.Gradients.sillyseals_colour_solar,
     config = { ascended_multiplier = 5 },
 	loc_vars = function(self)
@@ -696,7 +703,7 @@ SMODS.Seal{
     badge_colour = SMODS.Gradients.sillyseals_colour_switch,
     config = { joker_targets = 1 },
 	no_edeck = true,
-
+	weight = 0.05,
     calculate = function(self, card, context)
 		if context.main_scoring and context.cardarea == G.play then
 			if card.edition then
@@ -738,7 +745,7 @@ SMODS.Seal{
 	key = 'primaryseal',
 	pos = { x = 0, y = 0 },
 	no_edeck = true,
-
+	weight = 0.05,
     badge_colour = SMODS.Gradients.sillyseals_colour_primary,
     config = { extra_chips_add = 500, extra_chips_mult = 1.1 },
     calculate = function(self, card, context)
@@ -761,7 +768,7 @@ SMODS.Seal{
     badge_colour = HEX "AFB8FA",
     config = { money_per_tarot = 8 },
 	no_edeck = true,
-
+	weight = 0.05,
     calculate = function(self, card, context)
 		if context.main_scoring and context.cardarea == G.play then
 			local tarots_in_tray = 0
@@ -789,7 +796,7 @@ SMODS.Seal{
 	pos = { x = 0, y = 0 },
     badge_colour = HEX "FAA896",
 	no_edeck = true,
-
+	weight = 0.008,
     calculate = function(self, card, context)
 		if context.pre_discard and G.GAME.current_round.discards_left == 1 then
 			for i = 1, #G.hand.highlighted do
@@ -811,7 +818,7 @@ SMODS.Seal{
     badge_colour = SMODS.Gradients.sillyseals_colour_rainbow,
     config = { colour_card_advance = 5 },
 	no_edeck = true,
-
+	weight = 0.008,
     calculate = function(self, card, context)
 		if context.after then
 			for i = 1, #G.hand.cards do 
@@ -840,7 +847,7 @@ SMODS.Seal{
 	key = 'wildseal',
 	pos = { x = 0, y = 0 },
 	no_edeck = true,
-
+	weight = 0.008,
     badge_colour = SMODS.Gradients.sillyseals_colour_wild,
     config = { extra_chips_add = 1000, extra_chips_mult = 2, wild_extra_chips_add = 5000, wild_extra_chips_mult = 10},
     calculate = function(self, card, context)
@@ -862,13 +869,39 @@ SMODS.Seal{
 	atlas = 'Wild'
 }
 
+--[[SMODS.Seal{
+	key = 'wildseal',
+	pos = { x = 0, y = 0 },
+	no_edeck = true,
+	weight = 0.008,
+    badge_colour = SMODS.Gradients.sillyseals_colour_wild,
+    config = { extra_chips_add = 1, extra_chips_mult = 1.1, wild_extra_chips_add = 5, wild_extra_chips_mult = 2},
+    calculate = function(self, card, context)
+		if context.pre_discard then
+			for i = 1, #G.hand.cards do
+				if G.playing_cards[i].ability.effect == "Wild Card" then
+					G.playing_cards[i].ability.perma_x_chips = (math.floor((G.playing_cards[i].ability.perma_x_chips + self.config.wild_extra_chips_add) * 100)) / 100
+					G.playing_cards[i].ability.perma_x_chips = (math.floor((G.playing_cards[i].ability.perma_x_chips * self.config.wild_extra_chips_mult) * 100)) / 100
+				else
+					G.playing_cards[i].ability.perma_x_chips = (math.floor((G.playing_cards[i].ability.perma_x_chips + self.config.extra_chips_add) * 100)) / 100
+					G.playing_cards[i].ability.perma_x_chips = (math.floor((G.playing_cards[i].ability.perma_x_chips * self.config.extra_chips_mult) * 100)) / 100
+				end
+			end
+		end
+    end,
+	loc_vars = function(self)
+        return { vars = { self.config.extra_chips_add, self.config.extra_chips_mult, self.config.wild_extra_chips_add, self.config.wild_extra_chips_mult} }
+    end,
+	atlas = 'Wild'
+}]]
+
 SMODS.Seal{
 	key = 'midnightseal',
 	pos = { x = 0, y = 0 },
     badge_colour = HEX "00003E",
     config = { hand_level_up_mult = 10 },
 	no_edeck = true,
-
+	weight = 0.008,
     calculate = function(self, card, context)
 		if context.playing_card_end_of_round then
 			for k, v in pairs(G.GAME.hands) do
@@ -890,6 +923,7 @@ SMODS.Seal{
     badge_colour = HEX "A20000",
     config = { exponentiation_mult = 2 },
 	no_edeck = true,
+	weight = 0.001,
     calculate = function(self, card, context)
 		if context.main_scoring and context.cardarea == G.play then
 			local deletable_jokers = {}
@@ -955,6 +989,7 @@ SMODS.Seal{
     badge_colour = HEX "4D00FA",
     config = { extra_spectrals = 2 },
 	no_edeck = true,
+	weight = 0.001,
     calculate = function(self, card, context)
 		if context.destroying_card and not card.will_shatter then
 			card.will_shatter = true
@@ -992,6 +1027,7 @@ SMODS.Seal{
     badge_colour = HEX "50D5FA",
     config = { negative_squared_jokers = 1, money = 25 },
 	no_edeck = true,
+	weight = 0.001,
     calculate = function(self, card, context)
 		if context.main_scoring and context.cardarea == G.play then
 			for i = 1, self.config.negative_squared_jokers do
@@ -1017,6 +1053,7 @@ SMODS.Seal{
     badge_colour = HEX '2F87A3',
     config = { ante_multiplier = 4 },
 	no_edeck = true,
+	weight = 0.001,
     calculate = function(self, card, context)
 		if 
 			context.destroy_card 
