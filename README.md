@@ -9,4 +9,4 @@ New seals use a rarity system with the same rarity names that Jokers use, which 
 - [JenLib](/JenLib)
 - [MoreFluff](https://github.com/notmario/MoreFluff)
 
-- If you have the POLTERWORX modpack (currently available in the [POLTERWORX discord server](https://discord.gg/polterworx)), you can install Silly Seals and start playing right away!
+If you have the POLTERWORX modpack (currently available in the [POLTERWORX discord server](https://discord.gg/polterworx)), you can install Silly Seals and start playing right away!
