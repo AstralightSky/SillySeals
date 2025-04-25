@@ -1146,7 +1146,7 @@ SMODS.Consumable{
 		-- This will add a tooltip.
 		mod_conv = "sillyseals_deepblueseal_seal",
 		-- Tooltip args
-		seal = { planets_amount = 5 },
+		seal = { planets_amount = 8 },
 		max_highlighted = 1,
 	},
     loc_vars = function(self,info_queue,center)
@@ -1356,7 +1356,7 @@ SMODS.Consumable{
 		-- This will add a tooltip.
 		mod_conv = "sillyseals_neapolitanseal_seal",
 		-- Tooltip args
-		seal = { colours_amount = 3 },
+		seal = { colours_amount = 5 },
 		max_highlighted = 1,
 	},
     loc_vars = function(self,info_queue,center)
@@ -1517,7 +1517,7 @@ SMODS.Consumable{
 		-- This will add a tooltip.
 		mod_conv = "sillyseals_solarseal_seal",
 		-- Tooltip args
-		seal = { ascended_multiplier = 2 },
+		seal = { ascended_multiplier = 5 },
 		max_highlighted = 1,
 	},
     loc_vars = function(self,info_queue,center)
@@ -1901,7 +1901,7 @@ SMODS.Consumable{
 		-- This will add a tooltip.
 		mod_conv = "sillyseals_midnightseal_seal",
 		-- Tooltip args
-		seal = { hand_level_up_mult = 2.5 },
+		seal = { hand_level_up_mult = 10 },
 		max_highlighted = 1,
 	},
     loc_vars = function(self,info_queue,center)

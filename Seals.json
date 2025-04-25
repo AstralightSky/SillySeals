@@ -2,7 +2,7 @@
     "id": "sillyseals",
     "name": "Silly Seals",
     "author": ["astralightsky"],
-    "description": "Adds 20 new seals with the same flavour of 'unbalanced' as Cryptid.",
+    "description": "A Cryptid addon that adds numerous things, particularly seal-based.",
     "prefix": "sillyseals",
     "main_file": "Seals.lua",
     "badge_colour": "FF00FF",
