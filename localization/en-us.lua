@@ -179,6 +179,29 @@ return {
             },
         },
         Tag = {
+            tag_sillyseals_chronomicon = {
+				name = "Chronomicon Tag",
+				text = {
+					"Gives a free",
+					"{C:spectral}Jumbo Seal Spectral", 
+                    "{C:spectral}Pack"
+				},
+			},
+            tag_sillyseals_dilation = {
+				name = "Dilation Tag",
+				text = {
+					"Gives a free",
+					"{C:cry_exotic,E:1}Special {C:spectral}Seal Spectral", 
+                    "{C:spectral}Pack"
+				},
+			},
+            tag_sillyseals_slots = {
+				name = "Slots Tag",
+				text = {
+					"{C:green}#1# in #2#{} chance to create",
+					"an {C:cry_exotic,E:1}Dilation Tag",
+				},
+			},
         },
         Tarot = {
         },
@@ -308,6 +331,19 @@ return {
                     '{C:inactive,s:0.75}(Also rounds extra chips to the nearest integer)'
                 }
             },
+            --[[
+            
+                        sillyseals_wildseal_seal = {
+                name = 'Wild Seal',
+                text = {
+                    'When {C:attention}discarded{}, {C:attention}all cards{} in hand',
+                    'gain {C:blue}+#1#{} and {X:blue,C:white}X#2#{} extra {X:blue,C:white}XCHIPS{}',
+                    '{C:attention}Wild Cards{} gain {C:blue}+#3#{} and {X:blue,C:white}X#4#{} extra {X:blue,C:white}XCHIPS{}',
+                    '{C:inactive,s:0.75}(Also rounds extra {X:blue,C:white}XCHIPS {C:inactive,s:0.75}to 2 decimal places)'
+                }
+            },
+            
+            ]]
             sillyseals_midnightseal_seal = {
                 name = 'Midnight Seal',
                 text = {
