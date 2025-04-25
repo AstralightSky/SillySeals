@@ -1,0 +1,18 @@
+{
+    "id": "sillyseals",
+    "name": "Silly Seals",
+    "author": ["astralightsky"],
+    "description": "Adds 20 new seals with the same flavour of 'unbalanced' as Cryptid.",
+    "prefix": "sillyseals",
+    "main_file": "Seals.lua",
+    "badge_colour": "FF00FF",
+	"priority": 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999,
+    "dependencies": [
+        "Steamodded (>=1.0.0~ALPHA-1304a)",
+		"Talisman (>=2.1.0~dev)",
+		"JenLib (>=0.4.0)",
+		"Cryptid (>=0.5.5a~dev2)",
+        "MoreFluff (>=1.1.0)"
+    ],
+    "version": "0.1.0"
+}
