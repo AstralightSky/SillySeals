@@ -140,8 +140,8 @@ function G.FUNCS.get_poker_hand_info(_cards)
         ease_colour(G.C.UI_CHIPS, copy_table(G.C.GOLD), 0.3)
         ease_colour(G.C.UI_MULT, copy_table(G.C.GOLD), 0.3)
     else
-        ease_colour(G.C.UI_CHIPS, copy_table(G.C.RED), 0.3)
-        ease_colour(G.C.UI_MULT, copy_table(G.C.BLUE), 0.3)
+        ease_colour(G.C.UI_CHIPS, copy_table(G.C.BLUE), 0.3)
+        ease_colour(G.C.UI_MULT, copy_table(G.C.RED), 0.3)
     end
     G.GAME.current_round.current_hand.cry_asc_num_text = (G.GAME.current_round.current_hand.cry_asc_num and ((type(G.GAME.current_round.current_hand.cry_asc_num) == "table" and G.GAME.current_round.current_hand.cry_asc_num:gt(to_big(0)) or G.GAME.current_round.current_hand.cry_asc_num > 0))) and " (+" .. G.GAME.current_round.current_hand.cry_asc_num .. ")" or ""
     return text, loc_disp_text, poker_hands, scoring_hand, disp_text
