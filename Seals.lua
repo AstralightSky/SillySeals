@@ -477,7 +477,7 @@ SMODS.Seal{
 				trigger = "before",
 				delay = 0.0,
 				func = function()
-					sendDebugMessage(inspect(context), "Deep Blue Seal")
+					--sendDebugMessage(inspect(context), "Deep Blue Seal")
 					local card_type = "Planet"
 					local _planet, _hand, _tally = nil, nil, -1
 					if G.GAME.last_hand_played then
