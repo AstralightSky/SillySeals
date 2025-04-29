@@ -991,7 +991,7 @@ SMODS.Seal{
 	no_edeck = true,
 	weight = 0.001,
     calculate = function(self, card, context)
-		if context.destroying_card and not card.will_shatter then
+		if context.destroying_card and context.cardarea == G.play and context.destroy_card == card then
 			card.will_shatter = true
 			G.E_MANAGER:add_event(Event({
 				trigger = "before",
