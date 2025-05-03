@@ -418,6 +418,8 @@ return {
         },
         dictionary = {
             k_sealspectralpack = "Seal Spectral Pack",
+            seals_config_seal_boosters = "Seal Booster Packs",
+            seals_config_max_seal_rarity = "Max Seal Rarity",
         },
     }
 }
