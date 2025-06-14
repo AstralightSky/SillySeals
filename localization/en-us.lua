@@ -82,7 +82,7 @@ return {
             c_sillyseals_hellfire = {
                 name = 'Hellfire',
 	        	text = {
-                    "Add a {C:cry_epic}Infernal Seal{} to {C:attention}#1#{}",
+                    "Add an {C:cry_epic}Infernal Seal{} to {C:attention}#1#{}",
                     "selected card(s) in your", 
                     "hand, multiplies money",
                     "by {X:money,C:white}X0.4{}",
@@ -161,7 +161,7 @@ return {
             c_sillyseals_sirius = {
                 name = 'Sirius',
 	        	text = {
-                    "Add a {C:legendary}Midnight Seal{} to {C:attention}#1#{}",
+                    "Add an {C:legendary}Orion Seal{} to {C:attention}#1#{}",
                     "selected card(s) in your", 
                     "hand, multiplies money",
                     "by {X:money,C:white}X0{}",
@@ -175,6 +175,16 @@ return {
                     "to {C:attention}#1#{} selected card",
                     "in your hand", 
                     '{C:dark_edition,s:0.7,E:2}Sprite by : gudusername_53951{}'
+		        }
+            },
+            c_sillyseals_vsingularity = {
+                name = '{C:blood}Visceral Singularity',
+	        	text = {
+                    "{C:attention}Ascends a {C:cry_exotic}Exotic{} or {C:cry_ember}Wondrous",
+                    "seal on {C:attention}1{} selected playing",
+                    "card into its",
+                    "{X:black,C:white,E:1,s:1.5}Ritualistic{} or {X:jen_RGB,C:white,E:1,s:1.5}Transcendent{} form",
+                    "{V:1,s:1.25}#1#"
 		        }
             },
         },
@@ -204,6 +214,14 @@ return {
 			},
         },
         Tarot = {
+            c_sillyseals_chest = {
+                name = 'The Chest',
+	        	text = {
+                    "Add a {C:red}Red{}, {C:blue}Blue{},",
+                    "{C:money}Gold{} or {C:purple}Purple{} seal",
+                    "to {C:attention}#1#{} selected card(s)"
+		        }
+            },
         },
         Voucher = {
         },
@@ -211,7 +229,7 @@ return {
             sillyseals_hotpinkseal_seal = {
                 name = 'Hot Pink Seal',
 	        	text = {
-	        		'Retrigger this card {C:attention}#1#{} time(s) for',
+	        		'Retrigger this card {C:attention}#1#{} time for',
 	        		'{C:attention}every{} card in the played hand'
 	        	}
             },
@@ -229,7 +247,7 @@ return {
                 name = 'Lilac Seal',
                 text = {
                     'Create {C:attention}#1#{} {C:edition}Negative{} {C:spectral}Spectral{}',
-                    'card(s) for {C:attention}each{} card with this',
+                    'card for {C:attention}each{} card with this',
                     'seal if {C:attention}#2#{} or more cards with this',
                     'seal are {C:attention}discarded{} at {C:attention}the{}',
 			        '{C:attention}same time{}'
@@ -238,7 +256,7 @@ return {
             sillyseals_magentaseal_seal = {
                 name = 'Magenta Seal',
                 text = {
-                    '{C:attention}Upgrade{} played {C:attention}poker hand{} by',
+                    '{C:attention}Level up{} played {C:attention}poker hand{} by',
                     '{C:attention}twice{} the number of {C:blue}hands{} left',
                     'when {C:attention}scored{}'
                 }
@@ -254,7 +272,7 @@ return {
             sillyseals_neapolitanseal_seal = {
                 name = 'Neapolitan Seal',
 	        	text = {
-	        		'{C:attention}Create #1# {C:colourcard}Colour{} card(s) if',
+	        		'{C:attention}Create #1# {C:colourcard}Colour{} card if',
 	        		'used in a {C:attention}secret poker hand'
 	        	}
             },
@@ -264,7 +282,7 @@ return {
                     'Earn {C:attention}#1#x{} the amount of times',
                     'the {C:attention}played poker hand{} has been played',
                     'as {X:gold,C:white}${} when scored',
-                    '{C:dark_edition,s:0.7,E:2}Seal art by : gudusername_53951{}'
+                    '{C:dark_edition,s:0.7,E:2}Art  by : gudusername_53951{}'
 	        	}
             },
             sillyseals_infernalseal_seal = {
@@ -286,7 +304,9 @@ return {
                 text = {
                     '{C:attention}Applies{} the {C:edition}edition{} on this card',
                     'to {C:attention}all other scored cards{} and {C:attention}#1# random',
-                    '{C:attention}joker(s){} in your possession when scored'
+                    '{C:attention}joker(s){} in your possession when scored,',
+                    'then {C:attention}create #2# random {C:planet}planets{} with',
+                    'this card\'s {C:edition}edition{}'
                 }
             },
             sillyseals_primaryseal_seal = {
@@ -302,6 +322,16 @@ return {
                 text = {
 	            	'Earn {C:gold}$8{} for every {C:purple}tarot{} card in',
 	            	'your {C:attention}consumable tray{} when scored'
+                }
+            },
+            sillyseals_cyanseal_seal = {
+                name = 'Cyan Seal',
+                text = {
+	            	'Level up {C:attention}all {C:hearts}s{C:spades}u{C:clubs}i{C:diamonds}t{C:attention}s and {C:attention}ranks{} that', 
+                    'appear {C:attention}at least once{} in the played', 
+                    'poker hand by {C:attention}1{} after scoring', 
+                    'if held in hand'
+
                 }
             },
             sillyseals_peachseal_seal = {
@@ -343,6 +373,16 @@ return {
             },
             
             ]]
+            sillyseals_orionseal_seal = {
+                name = 'Orion Seal',
+                text = {
+                    'Create {C:attention}x+1 {C:dark_edition}Astral {C:planet}planets', 
+                    'for the {C:attention}final played poker hand', 
+                    'of round if it is your {C:attention}most played',
+                    'poker hand', 
+                    '{C:inactive,s:0.75}(x = the amount of unique planets you have)'
+                }
+            },
             sillyseals_midnightseal_seal = {
                 name = 'Midnight Seal',
                 text = {
@@ -355,20 +395,14 @@ return {
                 name = 'Blood Seal',
                 text = {
                     '{C:red}Destroy{} the {C:attention}lowest rarity Joker{} in your',
-                    'possession and {C:attention}exponentiate {C:blue}Chips{} and {C:red}Mult{} of',
-                    'the played hand by {X:dark_edition,C:white}^2x{} when played and scoring',
+                    'possession and {C:attention}exponentiate {C:blue}Chips{}, {C:red}Mult{},',
+                    '{C:blue}Level Chips{} and {C:red}Level Mult{} of the played',
+                    'hand by {X:dark_edition,C:white}^x+#1#{} after scoring if this card', 
+                    'is played and scoring',
                     '{C:inactive,s:0.75}(x = rarity tier)',
                     '{C:inactive,s:0.75}(If there are multiple jokers of this rarity',
                     '{C:inactive,s:0.75}in your possession, the leftmost joker will be',
                     '{C:inactive,s:0.75}destroyed)'
-                }
-            },
-            sillyseals_violetseal_seal = {
-                name = 'Violet Seal',
-                text = {
-                    'Create {C:attention}#1# {C:edition}hidden {C:spectral}Spectral(s){}',
-                    'plus {C:attention}1{} for {C:attention}each tag{} you have, then',
-                    '{C:red}destroy{} this card if played and scoring'
                 }
             },
             sillyseals_diamondseal_seal = {
@@ -383,14 +417,140 @@ return {
                 name = 'Teal Seal',
                 text = {
                     'If the {C:attention}ante{} is a {C:attention}multiple',
-                    'of {C:attention}4{} and the {C:attention}played hand{} has',
-                    'at least {C:attention}5 card(s){}, create a random {C:cry_exotic}Exotic',
-                    '{C:attention}joker{}, apply a {C:cry_exotic}Teal Seal{} to a {C:attention}random',
-                    'card in your deck and {C:red}destroy{} all played',
-                    'cards after scoring',
+                    'of your {C:attention}winning ante{} and the',
+                    '{C:attention}played hand{} has at least {C:attention}5 card(s),',
+                    'create a random {C:cry_exotic}Exotic{} joker, {C:red}permanently debuff',
+                    '{C:attention}all other{} played cards and {C:red}destroy{} this',
+                    'card after scoring',
                     '{C:inactive,s:0.75}(Can only activate once per hand)'
                 }
-            }
+            },
+            sillyseals_spectralseal_seal = {
+                name = 'Spectral Seal',
+                text = {
+                    'Generate {C:attention}#1# random {C:spectral}Spirits{},',
+                    'plus {C:attention}1{} for every {C:attention}5 max hands',
+                    'when played and scoring if it',
+                    'is the {C:attention}final hand{} of this round'
+                }
+            },
+            sillyseals_darkmatterseal_seal = {
+                name = 'Dark Matter Seal',
+                text = {
+                    '{C:attention}Multiplies{} the {C:planet}levels{} of all hands',
+                    'by {C:attention}#1#{} and {C:attention}exponentiates{} the {C:blue}Chips{},',
+                    '{C:red}Mult{}, {C:blue}Level Chips{} and {C:red}Level Mult{}',
+                    'of all hands by {C:attention}#2#{} if {C:attention}held in hand',
+                    'at end of round'
+                }
+            },
+            sillyseals_ectoplasmicseal_seal = {
+                name = 'Ectoplasmic Seal',
+                text = {
+                    'Generate {C:attention}#1# random {C:spectral}Spirits{},',
+                    'plus {C:attention}1{} for every {C:attention}5 max hands',
+                    'and {C:attention}activate the effects{} of all {C:spectral}Spirits',
+                    'when played and scoring if it',
+                    'is the {C:attention}final hand{} of this round',
+                    '{C:inactive,s:0.75}(Pandemonium has a global 5 round cooldown)',
+                    '{C:inactive,s:0.75}(#3#)'
+                }
+            },
+            sillyseals_ichorseal_seal = {
+                name = 'Ichor Seal',
+                text = {
+                    '{C:red}Destroy{} the {C:attention}lowest rarity Joker{} in your',
+                    'possession and {C:red}debuff{} all jokers of the {C:attention{}same', 
+                    '{C:attention}rarity{}, but {C:attention}tetrate {C:blue}Chips{}, {C:red}Mult{},',
+                    '{C:blue}Level Chips{} and {C:red}Level Mult{} of the played',
+                    'hand by {X:dark_edition,C:white}^x+#1#{} after scoring if this card', 
+                    'is played and scoring',
+                    '{C:inactive,s:0.75}(x = rarity tier)',
+                    '{C:inactive,s:0.75}(If there are multiple jokers of this rarity',
+                    '{C:inactive,s:0.75}in your possession, the leftmost joker will be',
+                    '{C:inactive,s:0.75}destroyed)'
+                }
+            },
+            sillyseals_shatteredseal_seal = {
+                name = 'Shattered Seal',
+                text = {
+                    'Create a {C:edition}Negative {C:cry_exotic}Tenebris',
+                    'and earn {X:money,C:white}$X1.1^x{} when played and scoring',
+                    '{C:inactive,s:0.75}(x = number of joker slots)'
+                }
+            },
+            sillyseals_calamitousseal_seal = {
+                name = 'Calamitous Seal',
+                text = {
+                    'If the {C:attention}ante{} is a {C:attention}multiple',
+                    'of {C:attention}twice{} your {C:attention}winning ante{} and the',
+                    '{C:attention}played hand{} has at least {C:attention}5 card(s):',
+                    'create a random {C:cry_ember}Wondrous{} joker and a {C:red}Godsmarble{}, {C:red}permanently debuff',
+                    '{C:attention}all other{} played cards, apply a {C:cry_exotic}Teal Seal{} to', 
+                    'a {C:attention}random card{} in your deck and {C:red}destroy{} this',
+                    'card after scoring',
+                    '{C:inactive,s:0.75}(Can only activate once per hand)',
+                    '{C:inactive,s:0.75}(Does not create a Godsmarble if you already have one)'
+                }
+            },
+            sillyseals_violetseal_seal = {
+                name = 'Violet Seal',
+                text = {
+                    'Create {C:attention}#1# {C:edition}hidden {C:spectral}Spectral(s){}',
+                    'plus {C:attention}1{} for {C:attention}each tag{} you have, then',
+                    '{C:red}destroy{} this card if played and scoring'
+                }
+            },
+            sillyseals_plasmaseal_seal = {
+                name = 'Plasma Seal',
+                text = {
+                    'If played and scoring outside of a Finisher Blind,',
+                    'changes the next Boss Blind to a random Finisher Blind',
+                    'If played and scoring during a Finisher Blind and',
+                    'the played hand scores at least 10x the blind size,',
+                    'generate 2 Empowered Tags and 2 Golden Voucher Tags'
+                }
+            },
+            sillyseals_motherboardseal_seal = {
+                name = 'Motherboard Seal',
+                text = {
+                    'Fixed 1% chance to create a ://POINTER',
+                    'if played and scoring',
+                    'The chance is multiplied by the amount',
+                    'of cards in the played hand'
+                }
+            },
+            sillyseals_toxicantseal_seal = {
+                name = 'Toxicant Seal',
+                text = {
+                    'Create 5 Torats and 2 other hidden spectrals,',
+                    'plus 2 Torats and 1 other hidden spectral for',
+                    'each tag you have, then destroy all of your tags',
+                    'and debuff this card'
+                }
+            },
+            sillyseals_strangeseal_seal = {
+                name = 'Strange Seal',
+                text = {
+                    'If played and scoring outside of an Epic Blind,',
+                    'changes the next Boss Blind to a random Epic Blind',
+                    'If played and scoring during an Epic Blind and',
+                    'the played hand scores at least 1e10x the blind size,',
+                    'produce the next tiers of all vouchers you own,',
+                    'generate 5 Empowered Tags, 5 Golden Voucher Tags',
+                    'and a Yawetag'
+                }
+            },
+            sillyseals_quantumseal_seal = {
+                name = 'Quantum Seal',
+                text = {
+                    'Fixed 1% chance to create a ://POINTER',
+                    'if played and scoring',
+                    'The chance is multiplied by double the amount',
+                    'of cards in the played hand',
+                    'The chance is set to 100% on a 5 round cooldown'
+                }
+            },
         },
     },
     misc = {
@@ -407,19 +567,46 @@ return {
             sillyseals_switchseal_seal = 'Switch Seal',
             sillyseals_primaryseal_seal = 'Primary Seal',
             sillyseals_platinumseal_seal = 'Platinum Seal',
+            sillyseals_cyanseal_seal = 'Cyan Seal',
             sillyseals_peachseal_seal = 'Peach Seal',
             sillyseals_rainbowseal_seal = 'Rainbow Seal',
             sillyseals_wildseal_seal = 'Wild Seal',
+            sillyseals_orionseal_seal = 'Orion Seal',
             sillyseals_midnightseal_seal = 'Midnight Seal',
             sillyseals_bloodseal_seal = 'Blood Seal',
-            sillyseals_violetseal_seal = 'Violet Seal',
             sillyseals_diamondseal_seal = 'Diamond Seal',
             sillyseals_tealseal_seal = 'Teal Seal',
+            sillyseals_spectralseal_seal = 'Spectral Seal',
+            sillyseals_darkmatterseal_seal = 'Dark Matter Seal',
+            sillyseals_ectoplasmicseal_seal = 'Ectoplasmic Seal',
+            sillyseals_ichorseal_seal = 'Ichor Seal',
+            sillyseals_shatteredseal_seal = 'Shattered Seal',
+            sillyseals_calamitousseal_seal = 'Calamitous Seal',
+            sillyseals_violetseal_seal = 'Violet Seal',
+            sillyseals_plasmaseal_seal = 'Plasma Seal',
+            sillyseals_motherboardseal_seal = 'Motherboard Seal',
+            sillyseals_toxicantseal_seal = 'Toxicant Seal',
+            sillyseals_strangeseal_seal = 'Strange Seal',
+            sillyseals_quantumseal_seal = 'Quantum Seal',
         },
         dictionary = {
             k_sealspectralpack = "Seal Spectral Pack",
             seals_config_seal_boosters = "Seal Booster Packs",
             seals_config_max_seal_rarity = "Max Seal Rarity",
+            sillyseals_allhands = "All Hands",
+            magentaseal_popup1 = "Level up ",
+            bloodseal_popup1 = " Joker Destroyed",
+            bloodseal_popup2 = " Chips and Mult",
+            bloodseal_popup3 = " Level Chips and Level Mult",
+            rarity_common = "Common",
+            rarity_uncommon = "Uncommon",
+            rarity_rare = "Rare",
+            rarity_epic = "Epic",
+            rarity_legendary = "Legendary",
+            rarity_exotic = "Exotic",
+            vsingularity_mod_badge = "Spectral...?",
+            seal_inactive = "rounds left",
+            seal_active = "Currently active!",
         },
     }
 }

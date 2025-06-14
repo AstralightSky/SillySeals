@@ -2,7 +2,7 @@ SMODS.Seal{
 	key = 'switchseal',
 	pos = { x = 0, y = 0 },
     badge_colour = SMODS.Gradients.sillyseals_colour_switch,
-    config = { joker_targets = 1 },
+    config = { joker_targets = 1, editioned_planets = 5 },
 	no_edeck = true,
 	weight = 0.05,
     calculate = function(self, card, context)
@@ -32,11 +32,21 @@ SMODS.Seal{
 						end
 					end
 				end
+				for i = 1, self.config.editioned_planets do
+					G.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.4, func = function()
+							local card2 = create_card('Planet', G.consumeables, nil, nil, nil, nil, nil, 'switch_planet')
+							card2:set_edition(card.edition, true)
+							card2:add_to_deck()
+							G.consumeables:emplace(card2)
+							card:juice_up(0.3, 0.5)
+						return true
+					end }))
+				end
 			end
 		end
     end,
 	loc_vars = function(self)
-        return { vars = { self.config.joker_targets } }
+        return { vars = { self.config.joker_targets, self.config.editioned_planets } }
     end,
 	atlas = 'Switch'
 }

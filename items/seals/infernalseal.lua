@@ -6,7 +6,7 @@ SMODS.Seal{
 	no_edeck = true,
 	weight = 0.05,
     calculate = function(self, card, context)
-		if context.playing_card_end_of_round then
+		if context.end_of_round and context.cardarea == G.hand and context.other_card == card then
 			for i = 1, self.config.quintuple_tags do
 				add_tag(Tag("tag_cry_quintuple"))
 			end
