@@ -161,7 +161,7 @@ return {
             c_sillyseals_sirius = {
                 name = 'Sirius',
 	        	text = {
-                    "Add an {C:legendary}Orion Seal{} to {C:attention}#1#{}",
+                    "Add a {C:legendary}Midnight Seal{} to {C:attention}#1#{}",
                     "selected card(s) in your", 
                     "hand, multiplies money",
                     "by {X:money,C:white}X0{}",
