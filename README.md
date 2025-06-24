@@ -6,7 +6,5 @@ New seals use a rarity system with the same rarity names that Jokers use, which 
 ## Silly Seals **requires**:
 - [Cryptid](https://github.com/MathIsFun0/Cryptid)
 - [Talisman](https://github.com/MathIsFun0/Talisman)
-- [JenLib + Aurinko](https://github.com/jenwalter666/JensBalatroCollection)
+- [JenLib + Aurinko](https://github.com/lord-ruby/RubysBalatroCollection)
 - [MoreFluff](https://github.com/notmario/MoreFluff)
-
-If you have the POLTERWORX modpack (currently available in the [POLTERWORX discord server](https://discord.gg/polterworx)), you can install Silly Seals and start playing right away!
